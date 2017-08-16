@@ -38,6 +38,8 @@ Optional requirements:
 1. Bootstrap the demo.
 
    ```
+   git clone --recursive https://github.com/samrocketman/demo-jenkins-world-2017
+   cd demo-jenkins-world-2017/
    ./jenkins_bootstrap.sh
    ```
 
@@ -55,9 +57,9 @@ TASKs include:
 - `getjenkins` - Downloads `jenkins.war` to the current directory.
 - `getplugins` - Downloads Jenkins plugin HPI files to `./plugins`.
 
-# Instructions
+# Additional Instructions
 
-### Provision Jenkins
+### Provision Jenkins via Vagrant
 
 This repository optionally uses [Vagrant][vagrant].  To bootstrap Jenkins simply
 run the following to start Jenkins.
