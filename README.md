@@ -21,13 +21,17 @@ involve:
 - Share additional resources which allow one to grow at using the Script Console
   further.
 
-[sched]: http://sched.co/ALN9
 
 # Requirements
 
 - Mac OS X or Linux.
 - More than two CPU cores recommended.
 - More than 6GB of RAM recommended if running Jenkins.
+
+Optional requirements:
+
+- [VirtualBox][vbox]
+- [Vagrant][vagrant]
 
 # Getting Started
 
@@ -51,7 +55,23 @@ TASKs include:
 - `getjenkins` - Downloads `jenkins.war` to the current directory.
 - `getplugins` - Downloads Jenkins plugin HPI files to `./plugins`.
 
-# Upgrade Jenkins and plugins
+# Instructions
+
+### Provision Jenkins
+
+This repository optionally uses [Vagrant][vagrant].  To bootstrap Jenkins simply
+run the following to start Jenkins.
+
+    vagrant up
+    export VAGRANT_JENKINS=1
+    ./jenkins_bootstrap.sh
+
+Visit `http://localhost:8080/` to see Jenkins running.  Clean up when you're
+finished with the following command.
+
+    vagrant destroy
+
+### Upgrade Jenkins and plugins
 
 To upgrade Jenkins master and plugin versions do the following:
 
@@ -59,25 +79,14 @@ To upgrade Jenkins master and plugin versions do the following:
     ./jenkins-bootstrap-shared/scripts/upgrade/upgrade_build_gradle.sh
     git add -A && git commit -m 'jenkins upgraded'
 
-# Instructions
-
-### Provision Jenkins
-
-This repository uses [Vagrant][vagrant].  To bootstrap Jenkins simply run the
-following to start Jenkins.
-
-    vagrant up
-
-Visit `http://localhost:8080/` to see Jenkins running.
-
 ### Build an RPM package
 
     ./gradlew clean buildRpm
 
-
 # License
 
 * [ASL 2](LICENSE)
-* [3rd party licenses](3rd_party)
 
+[sched]: http://sched.co/ALN9
 [vagrant]: https://www.vagrantup.com/
+[vbox]: https://www.virtualbox.org/
