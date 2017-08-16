@@ -1,2 +1,6 @@
 #!/bin/bash
 source jenkins-bootstrap-shared/jenkins_bootstrap.sh
+
+#configure example credentials
+jenkins_console --script "./scripts/credentials-example.groovy"
+create_job --job-name "Jervis" --xml-data "./configs/job_jervis_config.xml"
