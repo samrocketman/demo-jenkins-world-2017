@@ -2,8 +2,8 @@
 export JENKINS_WAR="${JENKINS_WAR:-jenkins.war}"
 
 export JENKINS_HOME="${JENKINS_HOME:-../my_jenkins_home}"
-export JENKINS_START="${JENKINS_START:-java -Xms4g -Xmx4g -XX:MaxPermSize=512M -jar ${JENKINS_WAR}}"
-export JENKINS_WEB="${JENKINS_WEB:-http://localhost:8080}"
+export JENKINS_START="${JENKINS_START:-java -Xms4g -Xmx4g -XX:MaxPermSize=512M -jar ${JENKINS_WAR} --httpPort=8081}"
+export JENKINS_WEB="${JENKINS_WEB:-http://localhost:8081}"
 export jenkins_url="${jenkins_url:-http://mirrors.jenkins-ci.org/war/latest/jenkins.war}"
 
 if [ -d 'jenkins-bootstrap-shared' ]; then
