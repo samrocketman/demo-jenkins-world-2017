@@ -4,6 +4,7 @@ dependencies {
 
     //get plugins
     getplugins 'com.coravy.hudson.plugins.github:github:1.28.0@hpi'
+    getplugins 'com.github.kostyasha.yet-another-docker:yet-another-docker-plugin:0.1.0-rc38@hpi'
     getplugins 'org.jenkins-ci.main:maven-plugin:2.17@hpi'
     getplugins 'org.jenkins-ci.plugins.icon-shim:icon-shim:2.0.3@hpi'
     getplugins 'org.jenkins-ci.plugins.pipeline-stage-view:pipeline-rest-api:2.8@hpi'
@@ -26,6 +27,7 @@ dependencies {
     getplugins 'org.jenkins-ci.plugins:bouncycastle-api:2.16.2@hpi'
     getplugins 'org.jenkins-ci.plugins:branch-api:2.0.11@hpi'
     getplugins 'org.jenkins-ci.plugins:build-timeout:1.18@hpi'
+    getplugins 'org.jenkins-ci.plugins:cloud-stats:0.13@hpi'
     getplugins 'org.jenkins-ci.plugins:cloudbees-folder:6.1.2@hpi'
     getplugins 'org.jenkins-ci.plugins:cobertura:1.11@hpi'
     getplugins 'org.jenkins-ci.plugins:conditional-buildstep:1.3.6@hpi'
