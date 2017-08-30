@@ -10,5 +10,32 @@ new File('/etc/passwd').text
 </textarea>
 <input type="submit" value"Submit" />
 </form>
+
+<details>
+<summary>Demo links</summary>
+<h2>Demo link <a href="https://en.wikipedia.org/wiki/Bookmarklet">bookmarklets</a></h2>
+<p>Bookmark these bookmarklets so they can be run on the script console page to show examples.</p>
+<ul>
+  <li>
+    <a href="javascript:(function(script){var old_element = document.getElementsByTagName('form')[1];var new_element = old_element.cloneNode(true);old_element.parentNode.replaceChild(new_element, old_element);document.getElementById('script').innerHTML = script;new_element.submit()})(&quot;&quot;)">Blank example</a>
+  </li>
+  <li>
+    <a href="javascript:(function(script){var old_element = document.getElementsByTagName('form')[1];var new_element = old_element.cloneNode(true);old_element.parentNode.replaceChild(new_element, old_element);document.getElementById('script').innerHTML = script;new_element.submit()})(&quot;println 'hello'\nprintln 'world'&quot;)">Multiline print Hello world</a>
+  </li>
+</ul>
+<h5>Security Demo</h5>
+<ul>
+  <li>
+    <a href="javascript:(function(script){var old_element = document.getElementsByTagName('form')[1];var new_element = old_element.cloneNode(true);old_element.parentNode.replaceChild(new_element, old_element);document.getElementById('script').innerHTML = script;new_element.submit()})(&quot;&quot;)">Blank example</a>
+  </li>
+</ul>
+<h5>Configuration Demo</h5>
+<ul>
+  <li>
+    <a href="javascript:(function(script){var old_element = document.getElementsByTagName('form')[1];var new_element = old_element.cloneNode(true);old_element.parentNode.replaceChild(new_element, old_element);document.getElementById('script').innerHTML = script;new_element.submit()})(&quot;import org.jenkinsci.plugins.GithubSecurityRealm\nprintln Jenkins.instance.getSecurityRealm()\ndef x = new GithubSecurityRealm('hello', 'goodbye', 'foo', 'bar', 'dont care')\nprintln x\nJenkins.instance.setSecurityRealm(x)&quot;)">Configure GitHub Security Realm</a>
+  </li>
+</ul>
+</ul>
+</details>
 </body>
 </html>
