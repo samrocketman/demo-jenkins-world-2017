@@ -26,11 +26,20 @@ new File('/etc/passwd').text
 <h5>Security Demo</h5>
 <ul>
   <li>
-    <a href="javascript:(function(script){var old_element = document.getElementsByTagName('form')[1];var new_element = old_element.cloneNode(true);old_element.parentNode.replaceChild(new_element, old_element);document.getElementById('script').innerHTML = script;new_element.submit()})(&quot;&quot;)">Blank example</a>
+    <a href="javascript:(function(script){var old_element = document.getElementsByTagName('form')[1];var new_element = old_element.cloneNode(true);old_element.parentNode.replaceChild(new_element, old_element);document.getElementById('script').innerHTML = script;new_element.submit()})('new File(&quot;${Jenkins.instance.root}/credentials.xml&quot;).text')">Read credentials.xml</a>
+  </li>
+  <li>
+    <a href="javascript:(function(script){var old_element = document.getElementsByTagName('form')[1];var new_element = old_element.cloneNode(true);old_element.parentNode.replaceChild(new_element, old_element);document.getElementById('script').innerHTML = script;new_element.submit()})(&quot;import hudson.util.Secret\nSecret.fromString('{AQAAABAAAAAguhcOTpI3ac2aBGO+GNvqpdgViNEjlrHGFuV+oI9mvh1DSIEK4hVZswvYKugpNGkG}')&quot;)">Decrypt secret from credentials.xml</a>
+  </li>
+  <li>
+    <a href="javascript:(function(script){var old_element = document.getElementsByTagName('form')[1];var new_element = old_element.cloneNode(true);old_element.parentNode.replaceChild(new_element, old_element);document.getElementById('script').innerHTML = script;new_element.submit()})('&quot;ls -l ${Jenkins.instance.root.toString()}&quot;.execute().text')">Execute arbitrary shell command</a>
   </li>
 </ul>
 <h5>Configuration Demo</h5>
 <ul>
+  <li>
+    <a href="javascript:(function(script){var old_element = document.getElementsByTagName('form')[1];var new_element = old_element.cloneNode(true);old_element.parentNode.replaceChild(new_element, old_element);document.getElementById('script').innerHTML = script;new_element.submit()})(&quot;Jenkins.getInstance().metaClass.methods*.name.sort().unique()&quot;)">List methods on Jenkins.instance</a>
+  </li>
   <li>
     <a href="javascript:(function(script){var old_element = document.getElementsByTagName('form')[1];var new_element = old_element.cloneNode(true);old_element.parentNode.replaceChild(new_element, old_element);document.getElementById('script').innerHTML = script;new_element.submit()})(&quot;import org.jenkinsci.plugins.GithubSecurityRealm\nprintln Jenkins.instance.getSecurityRealm()\ndef x = new GithubSecurityRealm('hello', 'goodbye', 'foo', 'bar', 'dont care')\nprintln x\nJenkins.instance.setSecurityRealm(x)&quot;)">Configure GitHub Security Realm</a>
   </li>
