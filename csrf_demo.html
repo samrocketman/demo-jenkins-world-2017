@@ -12,7 +12,7 @@ new File('/etc/passwd').text
 </form>
 
 <details>
-<summary>Demo links</summary>
+<summary>Demo links (click to expand)</summary>
 <h2>Demo link <a href="https://en.wikipedia.org/wiki/Bookmarklet">bookmarklets</a></h2>
 <p>Bookmark these bookmarklets so they can be run on the script console page to show examples.</p>
 <ul>
@@ -41,7 +41,13 @@ new File('/etc/passwd').text
     <a href="javascript:(function(script){var old_element = document.getElementsByTagName('form')[1];var new_element = old_element.cloneNode(true);old_element.parentNode.replaceChild(new_element, old_element);document.getElementById('script').innerHTML = script;new_element.submit()})(&quot;Jenkins.getInstance().metaClass.methods*.name.sort().unique()&quot;)">List methods on Jenkins.instance</a>
   </li>
   <li>
+    <a href="javascript:(function(script){var old_element = document.getElementsByTagName('form')[1];var new_element = old_element.cloneNode(true);old_element.parentNode.replaceChild(new_element, old_element);document.getElementById('script').innerHTML = script;new_element.submit()})(&quot;Jenkins.instance.securityRealm&quot;)">Call getSecurityRealm</a>
+  </li>
+  <li>
     <a href="javascript:(function(script){var old_element = document.getElementsByTagName('form')[1];var new_element = old_element.cloneNode(true);old_element.parentNode.replaceChild(new_element, old_element);document.getElementById('script').innerHTML = script;new_element.submit()})(&quot;import org.jenkinsci.plugins.GithubSecurityRealm\nprintln Jenkins.instance.getSecurityRealm()\ndef x = new GithubSecurityRealm('hello', 'goodbye', 'foo', 'bar', 'dont care')\nprintln x\nJenkins.instance.setSecurityRealm(x)&quot;)">Configure GitHub Security Realm</a>
+  </li>
+  <li>
+    <a href="javascript:(function(script){var old_element = document.getElementsByTagName('form')[1];var new_element = old_element.cloneNode(true);old_element.parentNode.replaceChild(new_element, old_element);document.getElementById('script').innerHTML = script;new_element.submit()})('new File(&quot;${Jenkins.instance.root}/config.xml&quot;).text')">Read Global config.xml</a>
   </li>
 </ul>
 </ul>
