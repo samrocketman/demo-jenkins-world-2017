@@ -3,6 +3,10 @@
 This repository contains demo files of my presentation at Jenkins World 2017:
 [Mastering the Jenkins Script Console][sched].
 
+# Watch the video
+
+This presentation was recorded and is [available on YouTube][yt].
+
 # Presentation Abstract
 
 This interactive talk allows new users and seasoned experts alike to hone their
@@ -92,3 +96,4 @@ To upgrade Jenkins master and plugin versions do the following:
 [sched]: http://sched.co/ALN9
 [vagrant]: https://www.vagrantup.com/
 [vbox]: https://www.virtualbox.org/
+[yt]: https://www.youtube.com/watch?v=qaUPESDcsGg
